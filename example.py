@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 
-@app.route('/foo')
+@app.post('/foo')
 def foo():
     # Добавление флеш-сообщения.
     # Оно станет доступным только на следующий HTTP-запрос.

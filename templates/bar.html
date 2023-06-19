@@ -13,11 +13,11 @@
     {% endfor %}
   {% endif %}
   <hr>
-  <section class="search_users">
+  <form action="/foo" method="post">
     <label for="Search the user">Search the user:</label>
     <input type="search" name="term" value="{{ search }}">
     <input type="submit" value="Search" />
-  </section>
+  </form>
   <hr>
   {% for user in users %}
   <ul>
