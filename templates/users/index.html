@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>A_list_of_users</title>
+</head>
+
+<body>
+  <form action="/users" method="get">
+    <input type="search" name="term" value="{{search}}"/>
+    <input type="submit" value="Search" />
+  </form>
+  <!-- BEGIN (write your solution here) -->
+  {% for user in users %}
+  <ul>
+    <li>{{user}}</li>
+  </ul>
+  {% endfor %}
+  <!-- END -->
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!-- templates/bar.html -->
+<!doctype html>
+<h2>Users</h2>
+<style>
+  #color {
+    color: green;
+  }
+</style>
+<body>
+  {% if messages %}
+    {% for category, message in messages %}
+    <p class="{{ category }}" id="color">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+  <hr>
+  <section class="search_users">
+    <label for="Search the user">Search the user:</label>
+    <input type="search" name="term" value="{{ search }}">
+    <input type="submit" value="Search" />
+  </section>
+  <hr>
+  {% for user in users %}
+  <ul>
+    <li>{{ user.first_name }}</li>
+  </ul>
+  {% endfor %}
+</body>
